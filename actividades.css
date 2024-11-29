@@ -1,0 +1,121 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-image: url(IMAGENES/fuerte-de-samaipata.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-image: url(IMAGENES/gif-sal.gif);
+    background-size: cover;
+    background-position: center;
+    color: rgb(10, 177, 113);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #a5d6a7;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #a5d6a7;
+}
+
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.activity {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: rgb(213, 241, 221);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.activity:hover {
+    transform: scale(1.02);
+}
+
+.activity img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-right: 4px solid #66bb7f;
+}
+
+.activity div {
+    padding: 1rem;
+    flex: 1;
+}
+
+.activity h2 {
+    font-size: 1.5rem;
+    color: #388e3c;
+    margin-bottom: 0.5rem;
+}
+
+.activity p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #2e7d32;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.back-button {
+    margin-top: 30px;
+    padding: 20px 30px;
+    background: #388e6d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background: #075544;
+  }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .activity {
+        flex-direction: column;
+    }
+
+    .activity img {
+        border-right: none;
+        border-bottom: 4px solid #66bb6a;
+    }
+}

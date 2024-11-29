@@ -1,0 +1,160 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+ 
+  .header {
+    text-align: center;
+    background-color: #20603D; 
+    color: #F3F3F3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px 0 20px; 
+  }
+  
+  .logo {
+    background-image: url(IMAGENES/gif.gif);
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    border-bottom: 5px solid rgba(50, 115, 80, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F3F3F3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .logo h1 {
+    margin: 0;
+  }
+  
+  
+  nav {
+    width: 100%;
+    background: linear-gradient(135deg, #2b8c3f, #47b57f); 
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px; 
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .menu li {
+    position: relative;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #F3F3F3;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .menu li:hover > a {
+    background-color: #2BAE66;
+    border-radius: 5px;
+  }
+  
+  .submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #34855B; 
+    display: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu li:hover .submenu {
+    display: block;
+  }
+  
+  .submenu li a {
+    padding: 10px 20px;
+    display: block;
+    color: #F3F3F3;
+    transition: background 0.3s;
+  }
+  
+  .submenu li a:hover {
+    background-color: #2BAE66; 
+  }
+  
+  
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #FFF;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  /* para laptops */
+ 
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #20603D;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    #menu-toggle:checked + .menu-icon + .menu {
+      display: flex;
+    }
+  
+    .menu li {
+      text-align: center;
+    }
+  
+    .submenu {
+      position: relative;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+  
+  /* responsive */
+  @media (max-width: 576px) {
+    .logo {
+      background-image: url(IMAGENES/bolivia-saltena.gif);
+      height: 170px;
+      font-size: 1.5rem;
+      border-bottom: 3px solid rgba(75, 202, 128, 0.8);
+    }
+  
+    .menu {
+      position: static;
+      flex-direction: column;
+    }
+  }
+  

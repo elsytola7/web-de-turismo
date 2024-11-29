@@ -1,0 +1,233 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url(IMAGENES/atop-titicaca-01.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(50, 115, 80); 
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 10; 
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #20603D; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px; 
+}
+
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.menu-horizontal li a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.menu-horizontal li:hover {
+    background-color: #2BAE66; 
+}
+
+.menu-horizontal li a:hover {
+    color: #F3F3F3;
+}
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    background-color: #34855B; 
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+
+.menu-vertical li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.menu-vertical li a:hover {
+    background-color: #2BAE66; 
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(50, 115, 80, 0.9); 
+    border-radius: 10px;
+    color: #F3F3F3;
+}
+
+section {
+    margin-bottom: 20px;
+    position: relative;
+    text-align: justify; 
+}
+
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #E8F5E9; 
+}
+
+
+p {
+    background-color: rgba(91, 129, 105, 0.281); 
+    padding: 15px;
+    border-radius: 5px;
+    color: #F1F1F1;
+    line-height: 1.6;
+    margin-top: 20px; 
+}
+
+
+main img {
+    max-width: 40%; 
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px; 
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    float: left;
+}
+
+
+main img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+.footer {
+    background-color: #20603D;
+    color: #F3F3F3;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-section {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #2BAE66; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #F1F1F1;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #2BAE66;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #E8F5E9; 
+}
+
+/* Responsive diseño */
+/* Tablets */
+@media (max-width: 768px) {
+    .menu-horizontal {
+        flex-direction: column;
+    }
+
+    .menu-horizontal li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 20px;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 576px) {
+    nav {
+        padding: 10px;
+    }
+
+    .menu-horizontal {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #20603D; 
+    }
+
+    .menu-horizontal.active {
+        display: flex;
+    }
+
+    .menu-horizontal li {
+        margin: 5px 0;
+    }
+
+    .menu-horizontal li a {
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        text-align: right;
+        padding: 10px;
+        cursor: pointer;
+        color: #FFF;
+        font-size: 1.5rem;
+    }
+}

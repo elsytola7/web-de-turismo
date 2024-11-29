@@ -1,0 +1,102 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(IMAGENES/atardecer-imagen.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-image: url(IMAGENES/bolivia-collage.jpg);
+    color: white;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  main {
+    max-width: 1250px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  section.lugar {
+    margin-bottom: 40px;
+    background-color: #bce6d4;
+    border-radius: 15px;
+    padding: 15px;
+  }
+  
+  section.lugar h2 {
+    font-size: 30px;
+    background-color: #075544c9;
+    color: #c7f3c9;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     /* margin-left: 269px;*/
+  }
+  
+   .contenido {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .contenido p {
+    flex: 2;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #388e6d;
+  }
+  
+  .image-placeholder {
+    flex: 1;
+    max-width: 250px;
+  }
+  
+  .image-placeholder img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+
+  main img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(70, 136, 103, 0.3);
+}
+  
+  .back-button {
+    margin-top: 30px;
+    padding: 20px 30px;
+    background: #388e6d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background: #075544;
+  } 
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .contenido {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image-placeholder {
+      max-width: 100%;
+    }
+  }
